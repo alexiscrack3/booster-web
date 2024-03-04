@@ -27,6 +27,13 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    static: path.join(__dirname, "dist"),
+    historyApiFallback: true,
+    port: 8080,
+    open: true,
+    compress: true,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
